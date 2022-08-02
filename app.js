@@ -23,7 +23,7 @@ function fetchCourses(){
   xhrRequest.send();
 
   xhrRequest.onload = function(){
-    var responseJSON = JSON.parse(xhrRequest.response);
+    var responseJSON = JSON.parse(this.response);
     var pageLimit = 30;
     //console.log(responseJSON.data.courses[0].title);
     for(var i = 0; i < pageLimit; i += 3){
